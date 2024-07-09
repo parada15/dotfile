@@ -116,6 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Agregar de Alias
+if [ -f ~/.bash_aliases ];
+then
+    . ~/.bash_aliases
+fi
+
+# Innorar MAYUSCULAS o minusculas en auto TAB
+bind "set completion-ignore-case on"
+
 # Pront de Terminal
 export PS1="\[\e[0;1m\]┌─(\[\e[31;1m\]\u@\H\[\e[0;1m\])»{\[\e[36;1m\]\w\[\e[0;1m\]}\n└──┤ \[\e[0m\]"
 
